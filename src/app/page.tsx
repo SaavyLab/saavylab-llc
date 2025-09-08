@@ -46,8 +46,7 @@ export default function Home() {
         <div className="card p-5 transition-transform duration-200 hover:-translate-y-0.5">
           <h3 className="font-semibold">Orpheus</h3>
           <p className="mt-2 text-white/80 text-sm">
-            Your practice companion. Structure sessions, track progress, and stay
-            motivated.
+            Your practice companion. Structure sessions, ear training, and note taking.
           </p>
           <a className="mt-4 inline-block text-sm" href="https://getorpheus.app" target="_blank" rel="noreferrer">
             Visit getorpheus.app →
@@ -55,16 +54,16 @@ export default function Home() {
         </div>
         <div className="card p-5 transition-transform duration-200 hover:-translate-y-0.5">
           <h3 className="font-semibold">Open Source</h3>
-          <p className="mt-2 text-white/80 text-sm">Reusable packages we use daily.</p>
+          <p className="mt-2 text-white/80 text-sm">Reusable packages we've opensourced.</p>
           <a className="mt-4 inline-block text-sm" href="/open-source">
-            Browse packages →
+            Browse packages (coming soon!)→
           </a>
         </div>
         <div className="card p-5 transition-transform duration-200 hover:-translate-y-0.5">
           <h3 className="font-semibold">Blog</h3>
           <p className="mt-2 text-white/80 text-sm">Deep dives on dev and music tech.</p>
           <a className="mt-4 inline-block text-sm" href="/blog">
-            Read updates →
+            Read updates (also coming soon!)→
           </a>
         </div>
       </section>

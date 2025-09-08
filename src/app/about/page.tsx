@@ -10,7 +10,7 @@ export default function AboutPage() {
     <div className="prose prose-invert max-w-3xl">
       <h1>About SaavyLab</h1>
       <p>
-        We’re a small studio building software for musicians — tools that help
+        We’re a small studio building software for musicians. We focus on tools that help
         players practice deliberately, perform confidently, and stay inspired.
         We also publish dev blogs and share open-source packages born from our
         day-to-day work.

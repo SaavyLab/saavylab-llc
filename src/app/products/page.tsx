@@ -12,8 +12,8 @@ export default function ProductsPage() {
       <div className="card p-5">
         <h2 className="text-xl font-semibold">Orpheus</h2>
         <p className="mt-2 text-white/80 max-w-prose">
-          A music education and practice companion designed to help you plan,
-          track, and improve your sessions. Available on iOS and Android.
+          A music education and companion designed to help you plan,
+          track, and improve your practice. Available on iOS and Android.
         </p>
         <div className="mt-4 flex gap-3">
           <a className="btn btn-primary" href="https://getorpheus.app" target="_blank" rel="noreferrer">
