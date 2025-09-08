@@ -1,24 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+SaavyLab LLC website — static Next.js app (App Router, Tailwind v4, TypeScript, Turbopack, Biome).
 
 ## Getting Started
 
-First, run the development server:
+Development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 # or
-bun dev
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Key files:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/layout.tsx`: Global layout, header/footer, metadata
+- `src/app/globals.css`: Theme tokens (Monokai Pro-inspired) + base styles
+- `src/app/page.tsx`: Home page
+- `src/app/{about,products,open-source,blog}/page.tsx`: Core pages
+- `src/components/*`: UI components
+
+Static export:
+
+- `next.config.ts` uses `output: 'export'` for static hosting.
+
+Formatting/linting:
+
+- `pnpm run format` / `pnpm run lint` (Biome)
 
 ## Learn More
 

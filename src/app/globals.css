@@ -1,26 +1,189 @@
 @import "tailwindcss";
 
+/* SaavyLab Monokai Pro-inspired dark theme tokens */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core brand colors */
+  --sl-primary: #ccad53;
+  --sl-primary-ctr: #2d2a2e;
+  --sl-primary-soft: color-mix(in oklab, var(--sl-primary) 15%, transparent);
+
+  --sl-secondary: #cc5170;
+  --sl-secondary-ctr: #2d2a2e;
+  --sl-secondary-soft: color-mix(in oklab, var(--sl-secondary) 15%, transparent);
+
+  --sl-tertiary: #8b7ec2;
+  --sl-tertiary-ctr: #2d2a2e;
+  --sl-tertiary-soft: color-mix(in oklab, var(--sl-tertiary) 15%, transparent);
+
+  /* Semantic colors */
+  --sl-error: #cc5170;
+  --sl-error-ctr: #2d2a2e;
+  --sl-error-soft: color-mix(in oklab, var(--sl-error) 15%, transparent);
+
+  /* Surfaces */
+  --sl-surface: #232023;
+  --sl-surface-ctr: #f5f5f3;
+  --sl-surface-variant-ctr: #f5f5f3;
+  --sl-outline: #615f61;
+  --sl-outline-variant: color-mix(in oklab, var(--sl-outline) 50%, transparent);
+  --sl-surface-tint: var(--sl-primary);
+  --sl-surface-highest: #363436;
+  --sl-surface-high: #2e2c2e;
+  --sl-surface-low: #232023;
+  --sl-surface-lowest: #1e1b1e;
+
+  --sl-shadow: #000000;
+  --sl-scrim: #000000;
+
+  /* Fonts from next/font */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Alpha blends for Orpheus-like panels */
+  --sl-primary-a8: color-mix(in oklab, var(--sl-primary) 8%, transparent);
+  --sl-secondary-a8: color-mix(in oklab, var(--sl-secondary) 8%, transparent);
+  --sl-primary-a10: color-mix(in oklab, var(--sl-primary) 10%, transparent);
+  --sl-primary-a20: color-mix(in oklab, var(--sl-primary) 20%, transparent);
+  --sl-primary-a30: color-mix(in oklab, var(--sl-primary) 30%, transparent);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Map CSS vars into Tailwind tokens */
+  --color-background: var(--sl-surface);
+  --color-foreground: var(--sl-surface-ctr);
+
+  --color-primary: var(--sl-primary);
+  --color-primary-contrast: var(--sl-primary-ctr);
+  --color-primary-soft: var(--sl-primary-soft);
+
+  --color-secondary: var(--sl-secondary);
+  --color-secondary-contrast: var(--sl-secondary-ctr);
+  --color-secondary-soft: var(--sl-secondary-soft);
+
+  --color-tertiary: var(--sl-tertiary);
+  --color-tertiary-contrast: var(--sl-tertiary-ctr);
+  --color-tertiary-soft: var(--sl-tertiary-soft);
+
+  --color-error: var(--sl-error);
+  --color-error-contrast: var(--sl-error-ctr);
+  --color-outline: var(--sl-outline);
+  --color-outline-variant: var(--sl-outline-variant);
+
+  --color-surface: var(--sl-surface);
+  --color-surface-high: var(--sl-surface-high);
+  --color-surface-highest: var(--sl-surface-highest);
+  --color-surface-low: var(--sl-surface-low);
+  --color-surface-lowest: var(--sl-surface-lowest);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Optional radii and spacing */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-card: 12px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base elements */
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--sl-surface);
+  color: var(--sl-surface-ctr);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+/* Shared UI primitives */
+.btn {
+  @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[--color-outline];
+}
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+.btn-primary:hover { background: color-mix(in oklab, var(--color-primary) 90%, black); }
+.btn-secondary { background: var(--color-secondary); color: var(--color-secondary-contrast); }
+.btn-secondary:hover { background: color-mix(in oklab, var(--color-secondary) 90%, black); }
+
+.container-page {
+  @apply mx-auto max-w-6xl px-6 md:px-8;
+}
+
+.card {
+  /* Orpheus-like: diagonal subtle brand gradient + soft primary border */
+  background: linear-gradient(135deg, var(--sl-primary-a8) 0%, var(--sl-secondary-a8) 100%);
+  border: 1px solid var(--sl-primary-a20);
+  border-radius: var(--radius-card);
+}
+
+.avatar-ring {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--sl-primary-a10);
+  border: 2px solid var(--sl-primary-a30);
+  color: var(--sl-primary);
+}
+
+a {
+  color: var(--color-primary);
+}
+a:hover {
+  color: color-mix(in oklab, var(--color-primary) 90%, white);
+}
+
+/* Minimal prose without plugin */
+.prose h1 { font-size: 1.875rem; line-height: 2.25rem; font-weight: 600; margin-bottom: 0.75rem; }
+.prose h2 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 600; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+.prose p { color: color-mix(in oklab, var(--color-foreground) 85%, transparent); margin-top: 0.75rem; }
+.prose a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Glassy surfaces (no hard dividers) */
+.glass {
+  background: color-mix(in oklab, var(--color-surface) 65%, transparent);
+  -webkit-backdrop-filter: saturate(1.2) blur(10px);
+  backdrop-filter: saturate(1.2) blur(10px);
+  box-shadow: 0 8px 30px -20px rgba(0, 0, 0, 0.65);
+}
+
+/* Accent badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--color-primary) 14%, transparent);
+  color: color-mix(in oklab, var(--color-foreground) 90%, transparent);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+/* Header nav pills */
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  color: color-mix(in oklab, var(--color-foreground) 85%, transparent);
+  border-radius: 9999px;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+.nav-pill:hover {
+  background: var(--sl-primary-a8);
+  color: var(--color-foreground);
+}
+.nav-pill.is-active {
+  background: var(--sl-primary-a10);
+  color: var(--color-foreground);
+  outline: 1px solid var(--sl-primary-a20);
 }

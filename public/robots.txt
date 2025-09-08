@@ -1,0 +1,7 @@
+# Hello, friendly crawlers! We’re SaavyLab — welcome.
+# Please index our site. If you spot issues, say hi at jayson@saavylab.com.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://saavylab.com/sitemap.xml
