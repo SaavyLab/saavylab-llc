@@ -8,8 +8,8 @@ const withMDX = createMDX({
 });
 
 const nextConfig: NextConfig = {
-  // Static export suitable for static hosting (no server runtime).
-  output: "export",
+  // Standalone output for OpenNext/Cloudflare Workers deployment
+  output: "standalone",
   pageExtensions: ["ts", "tsx", "mdx"],
 };
 
