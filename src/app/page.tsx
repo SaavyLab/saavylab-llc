@@ -5,7 +5,7 @@ export default function Home() {
         <div className="md:col-span-3">
           <div className="badge">
             <span className="inline-block h-2 w-2 rounded-full bg-[--color-primary]" />
-            Makers of Orpheus
+            Makers of Staaf
           </div>
           <h1 className="text-3xl md:text-5xl font-semibold leading-tight">
             Software for musicians and the devs who support them.
@@ -17,12 +17,12 @@ export default function Home() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href="https://getorpheus.app"
+              href="https://staaf.app"
               target="_blank"
               rel="noreferrer"
               className="btn btn-primary"
             >
-              Explore Orpheus
+              Explore Staaf
             </a>
             <a
               href="/open-source"
@@ -35,7 +35,7 @@ export default function Home() {
         <div className="md:col-span-2 card p-5 transition-transform duration-200 hover:-translate-y-0.5">
           <h2 className="text-xl font-semibold">What we’re working on</h2>
           <ul className="mt-3 space-y-2 text-white/80 text-sm">
-            <li>• Orpheus: iOS & Android companion for musicians</li>
+            <li>• Staaf: iOS & Android companion for musicians</li>
             <li>• Developer blog: architecture notes, music tech R&D</li>
             <li>• OSS: utilities, UI, audio tooling</li>
           </ul>
@@ -44,12 +44,12 @@ export default function Home() {
 
       <section className="grid gap-6 md:grid-cols-3">
         <div className="card p-5 transition-transform duration-200 hover:-translate-y-0.5">
-          <h3 className="font-semibold">Orpheus</h3>
+          <h3 className="font-semibold">Staaf</h3>
           <p className="mt-2 text-white/80 text-sm">
             Your practice companion. Structure sessions, ear training, and note taking.
           </p>
-          <a className="mt-4 inline-block text-sm" href="https://getorpheus.app" target="_blank" rel="noreferrer">
-            Visit getorpheus.app →
+          <a className="mt-4 inline-block text-sm" href="https://staaf.app" target="_blank" rel="noreferrer">
+            Visit staaf.app →
           </a>
         </div>
         <div className="card p-5 transition-transform duration-200 hover:-translate-y-0.5">

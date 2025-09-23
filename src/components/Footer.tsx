@@ -10,8 +10,8 @@ export default function Footer() {
             <Link href="/contact" className="hover:text-white">
               Contact
             </Link>
-            <Link href="https://getorpheus.app" className="hover:text-white" target="_blank" rel="noreferrer">
-              Orpheus
+            <Link href="https://staaf.app" className="hover:text-white" target="_blank" rel="noreferrer">
+              Staaf
             </Link>
             <Link href="https://github.com/saavylab" className="hover:text-white" target="_blank" rel="noreferrer">
               GitHub
