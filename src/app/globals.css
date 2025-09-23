@@ -39,7 +39,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Alpha blends for Orpheus-like panels */
+  /* Alpha blends for Staaf-like panels */
   --sl-primary-a8: color-mix(in oklab, var(--sl-primary) 8%, transparent);
   --sl-secondary-a8: color-mix(in oklab, var(--sl-secondary) 8%, transparent);
   --sl-primary-a10: color-mix(in oklab, var(--sl-primary) 10%, transparent);
@@ -116,7 +116,7 @@ body {
 }
 
 .card {
-  /* Orpheus-like: diagonal subtle brand gradient + soft primary border */
+  /* Staaf-like: diagonal subtle brand gradient + soft primary border */
   background: linear-gradient(135deg, var(--sl-primary-a8) 0%, var(--sl-secondary-a8) 100%);
   border: 1px solid var(--sl-primary-a20);
   border-radius: var(--radius-card);

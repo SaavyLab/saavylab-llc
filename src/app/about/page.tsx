@@ -16,7 +16,7 @@ export default function AboutPage() {
         day-to-day work.
       </p>
       <p>
-        Our flagship app is <a href="https://getorpheus.app" target="_blank" rel="noreferrer">Orpheus</a> — a
+        Our flagship app is <a href="https://staaf.app" target="_blank" rel="noreferrer">Staaf</a> — a
         music practice companion for iOS and Android.
       </p>
     </div>

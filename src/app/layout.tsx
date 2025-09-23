@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     template: "%s — SaavyLab LLC",
   },
   description:
-    "We craft tools for musicians and developers — makers of Orpheus.",
+    "We craft tools for musicians and developers — makers of Staaf.",
   metadataBase: new URL("https://saavylab.com"),
   openGraph: {
     title: "SaavyLab LLC — Software for Musicians",
     description:
-      "We craft tools for musicians and developers — makers of Orpheus.",
+      "We craft tools for musicians and developers — makers of Staaf.",
     type: "website",
     url: "https://saavylab.com",
   },
