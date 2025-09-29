@@ -56,7 +56,7 @@ export default function Home() {
           <h3 className="font-semibold">Open Source</h3>
           <p className="mt-2 text-white/80 text-sm">Reusable packages we've opensourced.</p>
           <a className="mt-4 inline-block text-sm" href="/open-source">
-            Browse packages (coming soon!)→
+            Browse packages →
           </a>
         </div>
         <div className="card p-5 transition-transform duration-200 hover:-translate-y-0.5">
